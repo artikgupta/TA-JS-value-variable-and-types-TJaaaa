@@ -122,23 +122,43 @@ switch (month) {
 
 */
 
-let salary = Number(prompt("Enter your salary"));
+let salary = prompt("Enter your salary");
 
-if (salary <= 20000) {
-  var tax = 10;
-  var taxAmt = (tax / 100) * salary;
-  salary = salary - taxAmt;
-  alert(salary);
-} else if (salary <= 40000) {
-  var tax = 20;
-  var taxAmt = (tax / 100) * salary;
-  salary = salary - taxAmt;
-  alert(salary);
-} else if (salary > 50000) {
-  var tax = 30;
-  var taxAmt = (tax / 100) * salary;
-  salary = salary - taxAmt;
-  alert(salary);
+// if (salary <= 20000) {
+//   var tax = 10;
+//   var taxAmt = (tax / 100) * salary;
+//   salary = salary - taxAmt;
+//   alert(salary);
+// } else if (salary <= 40000) {
+//   var tax = 20;
+//   var taxAmt = (tax / 100) * salary;
+//   salary = salary - taxAmt;
+//   alert(salary);
+// } else if (salary > 50000) {
+//   var tax = 30;
+//   var taxAmt = (tax / 100) * salary;
+//   salary = salary - taxAmt;
+//   alert(salary);
+// }
+
+switch (true) {
+  case salary <= 20000: {
+    let taxAmt = (salary * 10) / 100;
+    alert(`your in hand salary is ${salary - taxAmt}`);
+    break;
+  }
+  case salary <= 40000: {
+    let taxAmt = (salary * 20) / 100;
+    alert(`your in hand salary is ${salary - taxAmt}`);
+    break;
+  }
+  case salary > 50000: {
+    let taxAmt = (salary * 30) / 100;
+    alert(`your in hand salary is ${salary - taxAmt}`);
+    break;
+  }
+  default:
+    alert("Not a valid input");
 }
 
 //  if..else vs switch
@@ -169,16 +189,16 @@ let marks = Number(prompt("Enter your marks"));
 
 // Switch
 
-switch (marks) {
-  case "marks > 100":
+switch (true) {
+  case marks > 100:
     alert("Marks can't be greater than 100");
-  case "marks > 80 && marks < 100":
+  case marks > 80 && marks < 100:
     alert("Grade A");
-  case "marks > 50 && marks < 80":
+  case marks > 50 && marks < 80:
     alert("Grade B");
-  case "marks > 30 && marks < 50":
+  case marks > 30 && marks < 50:
     alert("Grade C");
-  case "marks > 0":
+  case marks > 0:
     alert("Grade D");
   default:
     alert("not a valid input");
