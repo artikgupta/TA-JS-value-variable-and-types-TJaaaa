@@ -38,24 +38,39 @@ alert(sum);
 
 for (let j = 0; j <= 10; j++) {
   if (j % 2 == 0) {
-    // console.log(j);
+    console.log(j);
   }
 }
 
 // 4. Print the odd numbers from 9 to 1 (both inclusive) using a for loop.
 
 for (let i = 9; i >= 1; i--) {
-  //   console.log(i);
+  if (i % 2 !== 0) {
+    console.log(i);
+  }
 }
 
 // 5. Concat all the numbers from 5 to 0 (both inclusive) in descending order using a while loop. (543210)
-let a = 6;
-while (a > 1) {
+let a = 5;
+let concatenated = "";
+while (a >= 0) {
+  concatenated = concatenated + a;
   a--;
-  console.log(a, "a");
+
+  console.log(concatenated);
 }
 
 // 6. Concat all the even numbers from 10 to 0 (both inclusive) in descending order using a while loop. (1086420)
+
+let value = 10;
+let evenVal = "";
+while (value >= 0) {
+  if (value % 2 == 0) {
+    evenVal = evenVal + value;
+    console.log(evenVal);
+  }
+  value--;
+}
 
 // Comparisoin
 
@@ -75,10 +90,16 @@ Example:
 let num1 = Number(prompt("Enter num1"));
 let num2 = Number(prompt("Enter num2"));
 
-if (typeof num1 !== "number" || typeof num2 !== "number") {
+// if (typeof num1 !== "number" || typeof num2 !== "number") {
+//   alert("Enter a valid value");
+// } else if (num1 === num2) {
+//   alert("true");
+// } else {
+//   alert("false");
+// }
+
+if (isNaN(num1) || isNaN(num2)) {
   alert("Enter a valid value");
-} else if (num1 === num2) {
-  alert("true");
 } else {
-  alert("false");
+  alert(num1 === num2);
 }
