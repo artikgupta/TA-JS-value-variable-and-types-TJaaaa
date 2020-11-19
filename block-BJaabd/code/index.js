@@ -10,6 +10,17 @@ Write a program that asks the user his/her age and check for the following condi
 - `if` the age is greater than 55 then print the message " You are too old to participate in the marthon".
 👇
 */
+let age = +prompt("Enter your age");
+
+if (age < 4) {
+  alert("Hey Kiddo! Can You Walk ?");
+} else if (age >= 4 && age <= 11) {
+  alert(" You are too young to participate in the marathon");
+} else if (age >= 12 && age <= 55) {
+  alert("You can participate in the marathon");
+} else {
+  alert("You are too old to participate in the marthon");
+}
 
 // Loops
 /*
@@ -22,11 +33,27 @@ n = 7 => output: heeeeeeello
 */
 // [Your code goes here]
 
+let n = +prompt("Enter the number ");
+
+let repeatedE = "e".repeat(n);
+
+alert(`h${repeatedE}llo`);
+
 /*
 Program to calculate the sum of first n natural numbers(1,2,3...n are known as natural numbers). Prompt user to enter n (using `prompt`) then based on input provided calculate and show result in `alert`.
 👇
 */
 // [Your code goes here]
+
+let number = +prompt("Enter the numbers");
+let sum = 0;
+let currentNum = 1;
+
+while (currentNum <= number) {
+  sum = sum + currentNum;
+  currentNum++;
+}
+alert(sum);
 
 /* Switch Statement
 
@@ -47,6 +74,40 @@ Take a number value from user and alert the message if it matches the conditions
 */
 // [Your code goes here]
 
+let num = prompt("Enter a number");
+
+switch (num) {
+  case "One":
+    alert(`number is equal to 1`);
+    break;
+  case "Two":
+    alert(`number is equal to 2`);
+    break;
+  case "Three":
+    alert(`number is equal to 3`);
+    break;
+  case "Four":
+    alert(`number is equal to 4`);
+    break;
+  case "Five":
+    alert(`number is equal to 5`);
+    break;
+  case "Six":
+    alert(`number is equal to 6`);
+    break;
+  case "Seven":
+    alert(`number is equal to 7`);
+    break;
+  case "Eight":
+    alert(`number is equal to 8`);
+    break;
+  case "Nine":
+    alert(`number is equal to 9`);
+    break;
+  default:
+    alert(`PLEASE TRY AGAIN`);
+}
+
 /*
 🎖Using switch statement do the following
 
@@ -63,15 +124,66 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 
 // [Your code goes here]
 
+let marks = +prompt("Enter your marks");
+
+switch (true) {
+  case marks > 90:
+    alert("AA");
+    break;
+  case marks > 80 && marks <= 90:
+    alert("AB");
+    break;
+  case marks > 70 && marks <= 80:
+    alert("BB");
+    break;
+  case marks > 60 && marks <= 70:
+    alert("BC");
+    break;
+  case marks > 50 && marks <= 60:
+    alert("CC");
+    break;
+  case marks > 40 && marks <= 50:
+    alert("CD");
+    break;
+  case marks > 30 && marks <= 40:
+    alert("DD");
+    break;
+  case marks <= 30:
+    alert("FF");
+    break;
+    break;
+  default:
+    alert("Enter a valid input");
+}
+
 /*
  🎖Write a JavaScript program that takes two `integers` from user (using prompt) and alerts the larger number.
 */
 // [your code goes here]
 
+let numA = +prompt("Enter numA");
+let numB = +prompt("Enter numB");
+if (numA > numB) {
+  alert(numA);
+} else {
+  alert(numB);
+}
+
 /*
 🎖Write a JavaScript conditional statement to find the sign (+, -) of product of three numbers. Take those three numbers from user using `prompt`. Display an alert box with the specified sign.
 */
 // [Your code goes here]
+
+let num1 = +prompt("Enter num1");
+let num2 = +prompt("Enter num2");
+let num3 = +prompt("Enter num3");
+
+let product = num1 * num2 * num3;
+if (product > 0) {
+  alert("+");
+} else {
+  alert("-");
+}
 
 /* Calculator
  🎖Make a simple calculator with these functions. Using prompt, type conversion, if else statement. Use prompt to take the input from user i.e two numbers and an operation (Add, Sub, Mul, Div).
@@ -86,3 +198,17 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 */
 
 // [Your code goes here]
+
+let number1 = +prompt("Enter a number1");
+let number2 = +prompt("Enter a number2");
+let operator = prompt("Enter an operator");
+
+if (operator === "+") {
+  alert(number1 + number2);
+} else if (operator === "-") {
+  alert(number1 > number2 ? number1 - number2 : `${number2} > ${number1}`);
+} else if (operator === "*") {
+  alert(number1 * number2);
+} else if (operator === "/") {
+  alert(number1 > number2 ? number1 / number2 : `${number2} > ${number1}`);
+}
